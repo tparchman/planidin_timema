@@ -21,13 +21,15 @@ Organizational notes and code for two sequencing sets:
 
 **NEED TO DO**: anneal more MSE adaptors, order iproof (have martinson order a tube), order ladder
 
-### 2/23-3/23: R/L and PCR for plates 1-6. Master mix in `timema23_RFseq_mastermixcockatils.xlsx`.
+### 3/23-4/19: R/L and PCR for plates 1-6. Master mix in `timema23_RFseq_mastermixcockatils.xlsx`.
 
-12/23/22: gel for T23_LIB1
+4/19/23: gel for T23_LIB1
  
-![GELIMAGE](md_images/FRLA_LIB1_GEL.jpg)
+![GELIMAGE](md_images/T23__LIB1_GEL.jpg)
 
-10 ul of each PCR product into final library. Tubes in door of freezer labelled **FRLA_LIB1**.
+
+# Done to here
+10 ul of each PCR product into final library. Tubes in door of freezer labelled **T23_LIB1**.
 
 12/28 - 12/31: R/L and PCR for plates 7-12. Master mix in `FRAXTWO_RFseq_mastermixcockatils.xlsx`. Note, plate 12 is 85% full, and contains 4 columns of *P. rigida* DNAs from Connie Bolte.
 
