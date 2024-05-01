@@ -4,9 +4,9 @@ Organizational notes and code for two libraries spanning 12 plates, also include
 
 
 ## Sample organization
-- Sample information with plate map is in ``.
+- Sample information with plate map is in `2022_NPPandVT_plates.xlsx`.
 
-- barcode key files correspond with LIB1 (plates 1-6; `barcode_info_XXXX.csv`) and LIB2 (plates 7-12; `barcode_info_XXXX.csv`).
+- barcode key files correspond with LIB1 (plates 1-6; `T231_barcode_key.csv`) and LIB2 (plates 7-12; `T231_barcode_key.csv`).
 
 - **NOTE** 
 
