@@ -6,7 +6,7 @@ Organizational notes and code for two libraries spanning 12 plates, also include
 ## Sample organization
 - Sample information with plate map is in `2022_NPPandVT_plates.xlsx`.
 
-- barcode key files correspond with LIB1 (plates 1-6; `T231_barcode_key.csv`) and LIB2 (plates 7-12; `T231_barcode_key.csv`).
+- barcode key files correspond with LIB1 (plates 1-6; `T231_barcode_key.csv`) and LIB2 (plates 7-12; `T232_barcode_key.csv`).
 
 - **NOTE** 
 
@@ -43,14 +43,14 @@ Organizational notes and code for two libraries spanning 12 plates, also include
 
 ## 1. Cleaning contaminants
 
-Being executed on ponderosa using tapioca pipeline. Commands in two bash scripts (cleaning_bash_CADE_FRVE.sh), executed as below (4/12/24). This work being carried out at:
+Being executed on ponderosa using tapioca pipeline. Commands in two bash scripts (cleaning_bash_T241.sh and cleaning_bash_T242.sh), executed as below (6/6/24). This work being carried out at:
 
-    /working/parchman/CADE_FRVE/
+    /working/parchman/T241and2/
 
 Decompress fastq files:
 
-    $ gunzip CADE-FRVE_S1_L001_R1_001.fastq.gz
-    $ gunzip CADE-FRVE_S1_L002_R1_001.fastq.gz
+    $ gunzip T23-1_S1_L001_R1_001.fastq.gz
+    $ gunzip T23-2_S2_L002_R1_001.fastq.gz
 
 Number of reads **before** cleaning:
 
@@ -64,8 +64,8 @@ To run cleaning_bash* tapioca wrapper, exit conda environment, load modules, and
     $ module load fqutils/0.4.1
     $ module load bowtie2/2.2.5
     
-    $ bash cleaning_bash_CADE_FRVE.sh &
-
+    $ bash cleaning_bash_T241.sh &
+    $ bash cleaning_bash_T242.sh &
 
 After .clean.fastq has been produced, rm raw data:
 
