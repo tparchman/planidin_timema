@@ -54,11 +54,12 @@ Decompress fastq files:
 
 Number of reads **before** cleaning:
 
-    $ nohup grep -c "^@" CADE-FRVE_S1_L001_R1_001.fastq > L001_number_of_rawreads.txt &
+    $ nohup grep -c "^@" T23-1_S1_L001_R1_001.fastq > T231_number_of_rawreads.txt &
     ## raw reads: 
 
-    $ nohup grep -c "^@" CADE-FRVE_S1_L002_R1_001.fastq > L002_number_of_rawreads.txt &
+    $ nohup grep -c "^@" T23-2_S2_L002_R1_001.fastq > T232_number_of_rawreads.txt &
     ## raw reads: 
+
 To run cleaning_bash* tapioca wrapper, exit conda environment, load modules, and run bash scripts.
 
     $ module load fqutils/0.4.1
@@ -74,7 +75,7 @@ After .clean.fastq has been produced, rm raw data:
 
 
 
-Raw data will stay stored in: /archive/parchman_lab/rawdata_to_backup/FRLA/
+Raw data will stay stored in: /backups/parchman_lab/rawdata_to_backup/FRLA/
 
 Number of reads **after** cleaning:
 
