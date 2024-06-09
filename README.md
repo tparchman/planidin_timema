@@ -73,31 +73,29 @@ After .clean.fastq has been produced, rm raw data:
     $ rm -rf CADE-FRVE_S1_L001_R1_001.fastq &
     $ rm -rf CADE-FRVE_S1_L002_R1_001.fastq &
 
-
-
 Raw data will stay stored in: /backups/parchman_lab/rawdata_to_backup/FRLA/
 
 Number of reads **after** cleaning:
 
-    $ nohup grep -c "^@" CADE_FRVE1.clean.fastq > CADE_FRVE1_clean_reads.txt &
+    $ nohup grep -c "^@" T24_1.clean.fastq > T24_1_clean_reads.txt &
     # number of clean reads : 
 
-    $ nohup grep -c "^@" CADE_FRVE2.clean.fastq > CADE_FRVE2_clean_reads.txt &
+    $ nohup grep -c "^@" T24_2.clean.fastq > T24_2_clean_reads.txt &
     # number of clean reads : 
 
 ####################################################################################
 ## 2. Barcode parsing:
 ####################################################################################
 
-Be sure to deactivate conda environment before running the below steps. Barcode keyfiles are `/working/parchman/TEPE23/FRLA1_barcode_key.csv`
+Be sure to deactivate conda environment before running the below steps. Barcode keyfiles are `/working/parchman/T241and2/T231_barcode_key.csv` and `T232_barcode_key.csv`
 `
 Parsing CADE_FRVE1 library:
 
-    $ nohup perl parse_barcodes768.pl CADE_FRVE_barcode_info_2018.csv CADE_FRVE1.clean.fastq A00 &>/dev/null &
+    $ nohup perl parse_barcodes768.pl T231_barcode_key.csv T24_1.clean.fastq A00 &>/dev/null &
 
 Parsing CADE_FRVE2 library:
 
-    $ nohup perl parse_barcodes768.pl CADE_FRVE_barcode_info_2018.csv CADE_FRVE2.clean.fastq A00 &>/dev/null &
+    $ nohup perl parse_barcodes768.pl T231_barcode_key.csv T24_2.clean.fastq A00 &>/dev/null &
 
 `NOTE`: the A00 object is the code that identifies the sequencer (first three characters after the @ in the fastq identifier).
 
