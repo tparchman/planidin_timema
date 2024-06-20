@@ -95,18 +95,18 @@ Parsing CADE_FRVE1 library:
 
 Parsing CADE_FRVE2 library:
 
-    $ nohup perl parse_barcodes768.pl T231_barcode_key.csv T24_2.clean.fastq A00 &>/dev/null &
+    $ nohup perl parse_barcodes768.pl T232_barcode_key.csv T24_2.clean.fastq A00 &>/dev/null &
 
 `NOTE`: the A00 object is the code that identifies the sequencer (first three characters after the @ in the fastq identifier).
 
-    $ less parsereport_CADE_FRVE1.clean.fastq
+    $ less parsereport_T24_2.clean.fastq
 
     Good mids count: 644098458
     Bad mids count: 25913131
     Number of seqs with potential MSE adapter in seq: 197210
     Seqs that were too short after removing MSE and beyond: 190
 
-    $ less parsereport_CADE_FRVE2.clean.fastq
+    $ less parsereport_T24_2.clean.fastq
 
     Good mids count: 668825901
     Bad mids count: 47552067
