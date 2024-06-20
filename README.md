@@ -99,40 +99,37 @@ Parsing CADE_FRVE2 library:
 
 `NOTE`: the A00 object is the code that identifies the sequencer (first three characters after the @ in the fastq identifier).
 
+    $ less parsereport_T24_1.clean.fastq
+
+    Good mids count: 1274342213
+    Bad mids count: 132040568
+    Number of seqs with potential MSE adapter in seq: 414213
+    Seqs that were too short after removing MSE and beyond: 670
+
     $ less parsereport_T24_2.clean.fastq
 
-    Good mids count: 644098458
-    Bad mids count: 25913131
-    Number of seqs with potential MSE adapter in seq: 197210
-    Seqs that were too short after removing MSE and beyond: 190
-
-    $ less parsereport_T24_2.clean.fastq
-
-    Good mids count: 668825901
-    Bad mids count: 47552067
-    Number of seqs with potential MSE adapter in seq: 648922
-    Seqs that were too short after removing MSE and beyond: 4257
+    Good mids count: 1392943740
+    Bad mids count: 141991829
+    Number of seqs with potential MSE adapter in seq: 662591
+    Seqs that were too short after removing MSE and beyond: 523
 
 ####################################################################################
 ## 3. splitting fastqs
 ####################################################################################
 
-For FRLA, doing this in `/working/parchman/CADE_FRVE/splitfastqs_CADE_FRVE/` 
-
-Concatenate the two parsed_*fastq files:
-
-    $ nohup cat parsed_CADE_FRVE1.clean.fastq parsed_CADE_FRVE2.clean.fastq > cat_parsed_CADE_FRVE12.clean.fastq &>/dev/null &
+doing this in `/working/parchman/T241and2/splitfastqsT1` and `/working/parchman/T241and2/splitfastqsT1`
 
 Make ids file
 
-    $ cut -f 3 -d "," CADE_FRVE_barcode_info_2018.csv | grep "[A-Z]" > CADE_FRVE_ids_noheader.txt
+    $ cut -f 3 -d "," T231_barcode_key.csv | grep "[A-Z]" > T231_ids_noheader.txt
 
+    $ cut -f 3 -d "," T232_barcode_key.csv | grep "[A-Z]" > T232_ids_noheader.txt
 
 Split fastqs by individual
 
-    $ nohup perl splitFastq_universal_regex.pl CADE_FRVE_ids_noheader.txt cat_CADE_FRVE_1and2.fastq &>/dev/null &
+    $ nohup perl splitFastq_universal_regex.pl T231_ids_noheader.txt parsed_T24_1.clean.fastq &>/dev/null &
 
-
+    $ nohup perl splitFastq_universal_regex.pl T232_ids_noheader.txt parsed_T24_2.clean.fastq &>/dev/null &
 
 # DONE TO HERE &&&&&&&&&&
 
